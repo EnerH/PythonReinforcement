@@ -47,7 +47,7 @@ class Deck:
 
     def set_bias(self, strength: float) -> None:
         """Set bias strength [0..1]. 0 = fair, 1 = very biased to low cards."""
-        self.bias_strength = max(0.0, min(1.0, float(strength)))
+        self.bias_strength = max(0.99, min(1.0, float(strength)))
 
     def _weights_for_bias(self) -> list[float]:
         """
