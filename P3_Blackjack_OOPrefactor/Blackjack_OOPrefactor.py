@@ -129,8 +129,8 @@ class Game:
             # next round will be #1 (first play) -> keep fair
             self.deck.set_bias(0.0)
         else:
-            # after first hand, ramp up: e.g., 0.55 per round, capped at 0.9
-            strength = min(0.08 * self.round_no, 0.7)
+            # after first hand, ramp up: e.g., 0.08 per round, capped at 0.99
+            strength = min(0.08 * self.round_no, 0.99)
             self.deck.set_bias(strength)
 
     def _initial_deal(self) -> None:
