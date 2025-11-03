@@ -1,3 +1,11 @@
-/.DS_Store
-/.venv
+# Ignore environment files
+.env
+*.env
 
+# Ignore virtual environments
+.venv/
+venv/
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
